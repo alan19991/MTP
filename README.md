@@ -1,4 +1,4 @@
-﻿# MTProto Proxy (Fake TLS) + Traefik
+# MTProto Proxy (Fake TLS) + Traefik
 
 这个项目使用一个 443 端口提供 Telegram MTProto Proxy（Fake TLS），并通过 Traefik 按 SNI 转发到 Telemt。
 
@@ -12,7 +12,7 @@
 ## GitHub 一键安装（推荐）
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/alan19991/mtproto-installer/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/alan19991/MTP/main/install.sh | bash
 ```
 
 安装脚本会从 GitHub `main` 分支下载所需配置文件。
@@ -30,25 +30,25 @@ curl -sSL https://raw.githubusercontent.com/alan19991/mtproto-installer/main/ins
 - 指定安装目录：
 
 ```bash
-INSTALL_DIR=/opt/mtproxy curl -sSL https://raw.githubusercontent.com/alan19991/mtproto-installer/main/install.sh | bash
+INSTALL_DIR=/opt/mtproxy curl -sSL https://raw.githubusercontent.com/alan19991/MTP/main/install.sh | bash
 ```
 
 - 非交互指定 SNI：
 
 ```bash
-FAKE_DOMAIN=example.com curl -sSL https://raw.githubusercontent.com/alan19991/mtproto-installer/main/install.sh | bash
+FAKE_DOMAIN=example.com curl -sSL https://raw.githubusercontent.com/alan19991/MTP/main/install.sh | bash
 ```
 
 - 非交互指定 `ad_tag`：
 
 ```bash
-AD_TAG=mytag curl -sSL https://raw.githubusercontent.com/alan19991/mtproto-installer/main/install.sh | bash
+AD_TAG=mytag curl -sSL https://raw.githubusercontent.com/alan19991/MTP/main/install.sh | bash
 ```
 
 ## 拉取代码后本地安装
 
 ```bash
-git clone https://github.com/alan19991/mtproto-installer.git
+git clone https://github.com/alan19991/MTP.git
 cd mtproto-installer
 ./install.sh
 ```
@@ -110,7 +110,7 @@ grep HostSNI traefik/dynamic/tcp.yml
 一键卸载：
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/alan19991/mtproto-installer/main/uninstall.sh | bash
+curl -sSL https://raw.githubusercontent.com/alan19991/MTP/main/uninstall.sh | bash
 ```
 
 指定目录并跳过确认：
