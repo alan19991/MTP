@@ -1,7 +1,7 @@
-﻿#!/usr/bin/env bash
+#!/usr/bin/env bash
 set -e
 
-REPO_RAW="${REPO_RAW:-https://raw.githubusercontent.com/alan19991/mtproto-installer/main}"
+REPO_RAW="${REPO_RAW:-https://raw.githubusercontent.com/alan19991/MTP/main}"
 INSTALL_DIR="${INSTALL_DIR:-$(pwd)/mtproxy-data}"
 FAKE_DOMAIN_IS_SET=0
 [[ -n "${FAKE_DOMAIN+x}" ]] && FAKE_DOMAIN_IS_SET=1
@@ -35,7 +35,7 @@ fetch() {
 
 rerun_cmd() {
 	if [[ "$0" == *bash* ]] || [[ "$0" == -* ]]; then
-		echo "curl -sSL https://raw.githubusercontent.com/alan19991/mtproto-installer/main/install.sh | bash"
+		echo "curl -sSL https://raw.githubusercontent.com/alan19991/MTP/main/install.sh | bash"
 	else
 		local dir
 		dir="$(cd "$(dirname "$0")" && pwd)"
